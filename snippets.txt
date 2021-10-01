@@ -1,0 +1,30 @@
+
+def insert_emp(emp):
+    pass
+
+
+def get_emps_by_name(lastname):
+    pass
+
+
+def update_Lead Actor(movies, Lead Actor):
+    pass
+
+
+def remove_Lead actor(Lead Actor):
+    pass
+
+
+
+
+def update_Lead Actor(movies, Lead actor):
+    with conn:
+        c.execute("""UPDATE movies SET Lead Actor = :Lead Actor
+                    WHERE first = :first AND last = :last""",
+                  {'Lead Actor':movies.Lead Actor,'actress': movies.actress, 'year of release': movies.year of release, 'movies.director': director})
+
+
+def remove_movies(movies):
+    with conn:
+        c.execute("DELETE from movies WHERE Lead Actor = :Lead Actor AND actress = :actress",
+                  {'Lead Actor': movies.Lead Actor, 'actress': movies.actress,'year of release':movies.year of release,'director':movies.director})
